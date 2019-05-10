@@ -1,0 +1,10 @@
+var t = window.TrelloPowerUp.iframe();
+var params = "";
+params += "card_id="     + t.arg("cardid");
+params += "&insured="    + t.arg("insured");
+params += "&address="    + t.arg("address");
+params += "&carrier="    + t.arg("carrier");
+params += "&claim="      + t.arg("claim");
+params += "&pa=";
+params += "&commission=" + t.arg("commission");
+window.location.href = "https://flapublicadjusting.com/new-check/?"+ params;

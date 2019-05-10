@@ -1,0 +1,30 @@
+{
+  "name": "trello-power-up-skeleton",
+  "version": "0.0.1",
+  "description": "A Power-Up skeleton to remix to start building your Power-Up!",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "dependencies": {
+    "express": "^4.15.2",
+    "cors": "^2.8.3",
+    "docxtemplater": "^3.9.6",
+    "jszip": "2.x",
+    "moment": "^2.24.0",
+    "body-parser": "^1.18.3",
+    "node-rest-client": "^3.1.0"
+  },
+  "engines": {
+    "node": "8.x"
+  },
+  "repository": {
+    "url": "https://glitch.com/edit/#!/family-adjusting"
+  },
+  "license": "MIT",
+  "keywords": [
+    "node",
+    "glitch",
+    "express"
+  ]
+}

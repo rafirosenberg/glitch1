@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Authorize</title>
+</head>
+
+<body>
+    <p>
+      To make full use of our Power-Up, we're going to need you to authorize us to access your Trello account!
+    </p>
+    <button type="button" class="mod-primary">Click to authorize</button>
+    <script src="https://p.trellocdn.com/power-up.min.js"></script>
+    <link rel="stylesheet" href="https://p.trellocdn.com/power-up.min.css">
+    <script>
+    var t = window.TrelloPowerUp.iframe({
+        appKey: '4687a605450d997c6a66283a184b63d0',
+        appName: 'Family Adjusting Power Up'
+    });
+    t.render(function() {
+        document.querySelector('button').addEventListener('click', function() {
+            t.getRestApi()
+                .authorize({ scope: 'read,write'})
+                .then(function(t) {
+                   window.location.href = './auth-success.html'; 
+                })
+                .catch(TrelloPowerUp.restApiError.AuthDeniedError, function() {
+                    alert('Cancelled!');
+                })
+            
+        }, false);
+    });
+    </script>
+</body>
+
+</html>
